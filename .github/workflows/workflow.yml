@@ -29,6 +29,10 @@ jobs:
     needs: build
 
     steps:
+      # Add checkout step first
+      - name: checkout
+        uses: actions/checkout@v2
+
       # ghcr Login
       - name: ghcr-login
         run: echo "${{ secrets.PAT }}" | docker login ghcr.io -u ${{ secrets.USERNAME }} --password-stdin
