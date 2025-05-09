@@ -33,6 +33,10 @@ jobs:
       - name: ghcr-login
         run: echo "${{ secrets.PAT }}" | docker login ghcr.io -u ${{ secrets.USERNAME }} --password-stdin
 
+      # Get the project version
+      - name: get-version
+        run: echo "VERSION=$(jq -r .version package.json)" >> $GITHUB_ENV
+
       # Uploading the Image
       - name: ghcr-upload
         run: docker push ghcr.io/krishnendudg/express-server-ghcr:${{ env.VERSION }}
