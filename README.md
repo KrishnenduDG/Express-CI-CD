@@ -41,10 +41,10 @@ Build and run with Docker:
 
 ```sh
 # Build image
-docker build -t ghcr.io/<github_username>/express-server-ghcr:latest .
+docker build -t express-server-ghcr:<VERSION> .
 
 # Run container
-docker run -d -p <HOST_PORT>:<DOCKER_PORT> --env-file .env ghcr.io/<github_username>/express-server-ghcr:latest .
+docker run -d -p <HOST_PORT>:<DOCKER_PORT> --env-file .env express-server-ghcr:<VERSION> .
 ```
 
 ## API Endpoints

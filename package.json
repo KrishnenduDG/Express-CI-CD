@@ -1,6 +1,6 @@
 {
-  "name": "gh_ci_cd",
-  "version": "1.0.0",
+  "name": "express-server",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "type": "module",
